@@ -43,6 +43,11 @@ func (u *UserHandler) RegisterRoutes(server *gin.Engine) {
 	//server.POST("/user", uu.SignUp)
 	//server.PUT("/user", uu.SignUp)
 	//server.GET("/users/:username", uu.Profile)
+	// test
+	server.GET("/hello", func(ctx *gin.Context) {
+		ctx.String(http.StatusOK, "hello start Kubernetes!")
+	})
+
 	ug := server.Group("/users")
 	// POST /users/signup
 	ug.POST("/signup", u.SignUp)

@@ -153,7 +153,9 @@ func initWebServer() *gin.Engine {
 	// jwt 校验
 	server.Use(middleware.NewLoginJWTMiddlewareBuilder().
 		IgnorePaths("/users/signup").
-		IgnorePaths("/users/login").Build())
+		IgnorePaths("/users/login").
+		IgnorePaths("/hello").
+		Build())
 
 	return server
 }
