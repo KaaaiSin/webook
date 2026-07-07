@@ -110,11 +110,9 @@ func initWebServer() *gin.Engine {
 		AllowCredentials: true,
 		AllowOriginFunc: func(origin string) bool {
 			if strings.HasPrefix(origin, "http://localhost") {
-				// 你的开发环境
 				return true
 			}
-			// 其他开发环境：你的域名
-			return strings.Contains(origin, "live.webook.com")
+			return strings.Contains(origin, "webook.com")
 		},
 		MaxAge: 12 * time.Hour,
 	}))

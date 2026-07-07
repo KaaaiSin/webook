@@ -21,6 +21,8 @@ spec:
           env:
             - name: MYSQL_ROOT_PASSWORD
               value: root
+            - name: MYSQL_DATABASE
+              value: webook
           imagePullPolicy: IfNotPresent
           # 持久化 挂载, 选择用哪一个
           volumeMounts:

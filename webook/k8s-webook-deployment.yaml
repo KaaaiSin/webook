@@ -19,6 +19,7 @@ spec:
       containers:
         - name: webook
           image: could/webook:v0.0.1
+          imagePullPolicy: IfNotPresent
           # 对应gin的端口
           ports:
             - containerPort: 8080
