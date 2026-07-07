@@ -44,3 +44,10 @@ yarn-error.log*
 # 临时 / 本地
 *.tmp
 *.bak
+
+# 本地目录 / 文件（不推送）
+front/
+docs/
+webook/docs/
+.cursor/
+test.db
