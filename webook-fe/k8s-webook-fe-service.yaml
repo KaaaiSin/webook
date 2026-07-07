@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: webook-fe
+spec:
+  type: LoadBalancer
+  selector:
+    app: webook-fe
+  ports:
+    - name: http
+      protocol: TCP
+      port: 89
+      targetPort: 3000
